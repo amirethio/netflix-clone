@@ -11,6 +11,8 @@ a {
   z-index: 1;
   top: 0;
   width: 100vw;
+  position: fixed;
+  /* background-color: transparent; */
 }
 
 .header_left ul {
@@ -22,15 +24,11 @@ a {
   width: 60vw;
   min-width: 625px;
   /* width: 140%; */
-   background-color: rgb(20, 20, 20);
+   /* background-color: rgb(20, 20, 20); */
+   
 }
-.gap{
-  height: 10vh;
-  width: 100%;
-  background-color: rgb(20, 20, 20);
-}
+
 .header_right ul {
-  background-color: rgb(20, 20, 20);
   list-style-type: none;
   display: flex;
   height: 10vh;

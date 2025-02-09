@@ -5,13 +5,15 @@
 
 body {
   background-color: #111;
+  font-family: "Bebas Neue", serif;
+  font-weight: 200;
+  font-style: normal;
 }
-@import url("https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap");
 
 :root {
   --main-color: #333;
-  --font-base: "Lexend", sans-serif;
-  --font-second-base: "Inter", sans-serif;
+  /* --font-base: "Lexend", sans-serif;
+  --font-second-base: "Inter", sans-serif; */
   --bg-color: #111;
   --primary-color: #ffffff;
   --second-color: #e50914;

@@ -33,7 +33,7 @@ function Header() {
             </li>
           </ul>
         </div>
-        <div className={styles.gap}></div>
+       
         <div className={styles.header_right}>
           <ul>
             <li>
