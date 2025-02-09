@@ -33,6 +33,7 @@ function Header() {
             </li>
           </ul>
         </div>
+        <div className={styles.gap}></div>
         <div className={styles.header_right}>
           <ul>
             <li>
@@ -45,7 +46,7 @@ function Header() {
               <a href="">{<AccountBoxIcon />}</a>
             </li>
             <li>
-              <a href="">{<ArrowDropDownIcon/>}</a>
+              <a href="">{<ArrowDropDownIcon />}</a>
             </li>
           </ul>
         </div>

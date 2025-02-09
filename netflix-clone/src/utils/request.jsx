@@ -4,7 +4,6 @@ const requests = {
   fetchPopulars: `/discover/movie?api_key=${API_KEY}&sort_by=popularity.desc`,
   fetchTopRated: `/movie/top_rated?api_key=${API_KEY}&language=en-US`,
   fetchActions: `/discover/movie?api_key=${API_KEY}&sort_by=popularity.desc&with_genres=28`,
-  fetchComedys: ``,
   fetchAnimations: `/discover/movie?api_key=${API_KEY}&sort_by=popularity.desc&with_genres=16`,
   fetchComedies: `/discover/movie?api_key=${API_KEY}&sort_by=popularity.desc&with_genres=35`,
   fetchHorrors: `/discover/movie?api_key=${API_KEY}&sort_by=popularity.desc&with_genres=27`,

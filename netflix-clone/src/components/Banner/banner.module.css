@@ -2,9 +2,10 @@
   margin-top: -10vh;
   height: 83vh;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size:cover;
   /* object-fit: contain; */
   color: white;
+  z-index: 8;
   /* background-position: center; */
 }
 .banner_content {

@@ -6,12 +6,11 @@ a {
     display: flex;
     justify-content: space-between;
   height: 10vh;
-  /* background-color: rgb(20, 20, 20); */
-  background-color: transparent;
   transition: all 0.5s;
   transition-timing-function: ease-in;
   z-index: 1;
   top: 0;
+  width: 100vw;
 }
 
 .header_left ul {
@@ -23,9 +22,15 @@ a {
   width: 60vw;
   min-width: 625px;
   /* width: 140%; */
+   background-color: rgb(20, 20, 20);
 }
-
+.gap{
+  height: 10vh;
+  width: 100%;
+  background-color: rgb(20, 20, 20);
+}
 .header_right ul {
+  background-color: rgb(20, 20, 20);
   list-style-type: none;
   display: flex;
   height: 10vh;
@@ -33,6 +38,8 @@ a {
   width: 15vw;
   justify-content: space-around;
   color: black;
+  padding-right: 2vw;
+
   
 }
 .logo_img{
