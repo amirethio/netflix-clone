@@ -43,10 +43,10 @@ function Header() {
               <a href="">{<NotificationsNoneIcon />}</a>
             </li>
             <li>
-              <a href="">{<AccountBoxIcon />}</a>
+              <a href="" className={styles.account}>{<AccountBoxIcon />}</a>
             </li>
             <li>
-              <a href="">{<ArrowDropDownIcon />}</a>
+              <a href="" >{<ArrowDropDownIcon />}</a>
             </li>
           </ul>
         </div>

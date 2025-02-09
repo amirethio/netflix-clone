@@ -7,6 +7,7 @@ import YouTube from "react-youtube";
 function Row({ title, fetchUrl, isLarge }) {
   const [movies, setmovies] = useState([]);
   const [trailer, settrailer] = useState("");
+  const [width ,setwidth] = useState(window.innerWidth)
   let baseUrl = "https://image.tmdb.org/t/p/original/";
   useEffect(() => {
     (async () => {
@@ -33,14 +34,14 @@ function Row({ title, fetchUrl, isLarge }) {
     }
   };
   const opts = {
-    height: "390",
-    width: "640",
     playerVars: {
       autoplay: 1,
     },
   };
   return (
     <>
+    {/* {console.log(width-80) */}
+    {/* } */}
       <div className={styles.row}>
         <h1>{title}</h1>
         {/* {console.log(trailer)} */}
@@ -60,7 +61,11 @@ function Row({ title, fetchUrl, isLarge }) {
             </>
           ))}
         </div>
-        <div className={styles.trailer}>{trailer && <YouTube videoId={trailer} opts={opts} />}</div>
+        <div className={styles.trailer}>
+          {trailer && (
+            <YouTube className={styles.youtube} videoId={trailer} opts={opts} />
+          )}
+        </div>
       </div>
     </>
   );

@@ -1,12 +1,12 @@
+
 .Banner_img {
-  margin-top: 9vh;
-    height: 78vh;
+  margin-top: 8vh;
+  height: 73vh;
   background-repeat: no-repeat;
   background-size:cover;
-  /* object-fit: contain; */
   color: white;
   z-index: 8;
-  /* background-position: center; */
+   background-position: center;
 }
 .banner_content {
   margin-left: 30px;
@@ -16,6 +16,7 @@
   margin-left: 30px;
   font-weight: 800;
   padding-bottom: 0.3rem;
+  margin-top: 100px;
 }
 .banner_des {
   width: 45rem;
@@ -44,13 +45,16 @@
   background-color: #c6c6c6;
   transition: all 0.2s;
 }
-.btn_list {
+.banner_content {
+  margin-left: 50px;
+  padding-top: 165px;
 }
-.btn_play {
-  /* color: #000;
-    background-color: #fff; */
+
+.banner_des{
+  width: 40vw;
+  margin-top: 15px;
 }
-.banner_fade {
+ .banner_fade {
   height: 40vh;
   margin-top: -29vh;
   background-image: linear-gradient(
@@ -59,3 +63,21 @@
     rgba(37, 37, 37, 0.91),#111
   );
 }
+@media (min-width:768px) {
+.Banner_img {
+      background-position:top;
+}
+.banner_content {
+  padding-top: 190px;
+}
+ .banner_fade {
+  height: 46vh;
+    margin-top: -38vh;
+  background-image: linear-gradient(
+    180deg,
+    transparent,
+    rgba(37, 37, 37, 0.91),#111
+  );
+}
+}
+

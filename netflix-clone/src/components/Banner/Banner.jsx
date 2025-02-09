@@ -40,13 +40,17 @@ function Banner() {
       >
         <div className={styles.banner_content}>
           <div>
-            <h1>{movies.original_title || movies.title}</h1>
+            <h1 className={styles.banner_title}>
+              {movies.original_title || movies.title}
+            </h1>
           </div>
           <div className={styles.btns}>
             <button className={styles.btn_play}>Play</button>
             <button className={styles.btn_list}>My List</button>
           </div>
-          <div className={styles.banner_des}>{truncate(movies.overview ,150)}</div>
+          <div className={styles.banner_des}>
+            {truncate(movies.overview, 150)}
+          </div>
         </div>
         <div className={styles.banner_fade}></div>
       </div>
