@@ -1,6 +1,6 @@
 .Banner_img {
-  margin-top: -3vh;
-  height: 73vh;
+     margin-top: 8vh;
+    height: 70vh;
   background-repeat: no-repeat;
   background-size: cover;
   color: white;
@@ -124,7 +124,7 @@
 .banner_fade {
   bottom: 0; /* Keep it at the bottom */
 }
-@media (max-height: 535px) and  (min-width: 462px) {
+@media (max-height: 555px) and  (min-width: 462px) {
  .banner_des {
    display: none;
   }
