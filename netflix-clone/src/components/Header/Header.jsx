@@ -1,18 +1,49 @@
+import logo from "./../../assets/images/netflix-logo.png";
+import { IoSearchSharp } from "react-icons/io5";
+import { MdNotificationsNone } from "react-icons/md";
+import { MdAccountBox } from "react-icons/md";
+import { FaCaretDown } from "react-icons/fa";
+import { GiHamburgerMenu } from "react-icons/gi";
+import { IoMdCloseCircle } from "react-icons/io";
 import styles from "./header.module.css";
-import netflix_logo from "./../../assets/images/netflix-logo.png";
-import SearchIcon from "@mui/icons-material/Search";
-import NotificationsNoneIcon from "@mui/icons-material/NotificationsNone";
-import AccountBoxIcon from "@mui/icons-material/AccountBox";
-import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
+import { useState, useEffect } from "react";
 function Header() {
+  // click mobile toggle bar and header bg part
+  const [click, setclick] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+  function scrolldown() {
+    setclick(click ? false : true);
+  }
+ useEffect(() => {
+   const handleScroll = () => {
+     if (window.scrollY > 80) {
+       setScrolled(true);
+     } else {
+       setScrolled(false);
+     }
+   };
+
+   window.addEventListener("scroll", handleScroll);
+   // Cleanup listener on component unmount
+   return () => window.removeEventListener("scroll", handleScroll);
+ }, []);
+
   return (
     <>
-      <div className={styles.header_container}>
-        <div className={styles.header_left}>
+      <div
+        className={`${styles.header_wrapper} ${scrolled && styles.header_black}`}
+      >
+        {/* left  section */}
+        <div
+          className={`${styles.header_lists} ${click && styles.header_mobile_lists}`}
+        >
           <ul>
-            <li>
-              <img className={styles.logo_img} src={netflix_logo} alt="" />
-            </li>
+            <span className={styles.minimize} onClick={scrolldown}>
+              <IoMdCloseCircle />
+            </span>
+            <div className={styles.header_logo}>
+              <img src={logo} alt="" />
+            </div>
             <li>
               <a href="#">Home</a>
             </li>
@@ -33,24 +64,20 @@ function Header() {
             </li>
           </ul>
         </div>
-       
-        <div className={styles.header_right}>
-          <ul>
-            <li>
-              <a href="">{<SearchIcon />}</a>
-            </li>
-            <li>
-              <a href="">{<NotificationsNoneIcon />}</a>
-            </li>
-            <li>
-              <a href="" className={styles.account}>{<AccountBoxIcon />}</a>
-            </li>
-            <li>
-              <a href="" >{<ArrowDropDownIcon />}</a>
-            </li>
-          </ul>
+        {/* right icons sections  */}
+        <div className={styles.header_icons}>
+          <IoSearchSharp />
+          <MdNotificationsNone />
+          <span className={styles.header_mobile}>
+            <MdAccountBox />
+            <span className={styles.header_menu} onClick={scrolldown}>
+              <GiHamburgerMenu />
+            </span>
+          </span>
+          <FaCaretDown />
         </div>
       </div>
+      {console.log(scrolled)}
     </>
   );
 }

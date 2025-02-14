@@ -10,7 +10,7 @@ function Banner() {
     (async () => {
       try {
         // sending get request to by concatinating base url(axions) with the end point(request)
-        const request = await axios.get(requests.fetchComedies);
+        const request = await axios.get(requests.fetchActions);
         // updating the state after the data fetch
         setmovies(
           request.data.results[
