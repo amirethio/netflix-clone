@@ -7,6 +7,7 @@ import { GiHamburgerMenu } from "react-icons/gi";
 import { IoMdCloseCircle } from "react-icons/io";
 import styles from "./header.module.css";
 import { useState, useEffect } from "react";
+
 function Header() {
   // click mobile toggle bar and header bg part
   const [click, setclick] = useState(false);
@@ -77,7 +78,6 @@ function Header() {
           <FaCaretDown />
         </div>
       </div>
-      {console.log(scrolled)}
     </>
   );
 }

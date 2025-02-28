@@ -115,6 +115,17 @@
 .banner_fade {
   bottom: 0; /* Keep it at the bottom */
 }
+.trailer {
+position: absolute;
+  bottom: 0;
+width: 100%;
+}
+.trailer > div{
+  
+ display: flex;
+ justify-content: center;
+
+}
 @media (max-height: 555px) and (min-width: 462px) {
   .banner_des {
     display: none;

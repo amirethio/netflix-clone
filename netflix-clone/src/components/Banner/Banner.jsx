@@ -2,10 +2,12 @@ import axios from "./../../utils/axios";
 import { useEffect, useState } from "react";
 import requests from "../../utils/request";
 import styles from "./banner.module.css";
-
+import movieTrailer from "movie-trailer";
+import YouTube from "react-youtube";
 function Banner() {
   // creating state to hold the data later after fetching
   const [movies, setmovies] = useState({});
+  const [trailer, settrailer] = useState("");
   useEffect(() => {
     (async () => {
       try {
@@ -25,11 +27,26 @@ function Banner() {
       }
     })();
   }, []);
+  const playClick = (mov) => {
+    if (trailer) {
+      settrailer("");
+    } else {
+      movieTrailer(mov).then((data) => {
+        const urlParms = new URLSearchParams(new URL(data).search);
+        // updating our trailer state by the vedio id
+        settrailer(urlParms.get("v"));
+      });
+    }
+  };
   function truncate(str, n) {
     // string.substr(startIndex, length)
     return str?.length > n ? str.substr(0, n - 1) + "..." : str;
   }
-
+  const opts = {
+    playerVars: {
+      autoplay: 1,
+    },
+  };
   return (
     <>
       <div
@@ -45,7 +62,14 @@ function Banner() {
             </h1>
           </div>
           <div className={styles.btns}>
-            <button className={styles.btn_play}>Play</button>
+            <button
+              className={styles.btn_play}
+              onClick={() =>
+                playClick(`${movies?.original_title} || ${movies?.title}`)
+              }
+            >
+              Play
+            </button>
             <button className={styles.btn_list}>My List</button>
           </div>
           <div className={styles.banner_des}>
@@ -53,6 +77,11 @@ function Banner() {
           </div>
         </div>
         <div className={styles.banner_fade}></div>
+      </div>
+      <div className={styles.trailer}>
+        {trailer && (
+          <YouTube className={styles.youtube} videoId={trailer} opts={opts} />
+        )}
       </div>
     </>
   );

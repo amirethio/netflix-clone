@@ -14,7 +14,6 @@ function Row({ title, fetchUrl, isLarge }) {
       try {
         const datas = await axios.get(fetchUrl);
         setmovies(datas.data.results);
-        // console.log(datas);
       } catch (error) {
         console.log(error);
       }
@@ -70,5 +69,5 @@ function Row({ title, fetchUrl, isLarge }) {
     </>
   );
 }
-//  {trailer} && <YouTube {` $ && {${videoId={trailer} } opts= ${opts} } `}
+
 export default Row;
