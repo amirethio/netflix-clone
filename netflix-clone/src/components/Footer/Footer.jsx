@@ -32,7 +32,7 @@ function Footer() {
             <a href="#">Service Code</a>
           </li>
           <li className={styles.copy_right}>
-            <a href="#"> &copy; 1997-2025 Netflix, Inc.</a>
+              <a href="#"> &copy; 2025 My Portfolio Demo</a>
           </li>
         </ul>
       </div>
@@ -57,16 +57,16 @@ function Footer() {
       <div className={`${styles.footer_col_3} ,${styles.col}`}>
         <ul>
           <li>
-            <a href="">Account</a>
+            <a href="#">Account</a>
           </li>
           <li>
-            <a href="">Ways to Watch</a>
+            <a href="#">Ways to Watch</a>
           </li>
           <li>
-            <a href="">Corporate Information</a>
+            <a href="#">Corporate Information</a>
           </li>
           <li>
-            <a href="">Only on Netflix</a>
+            <a href="#">Only on This Demo</a>
           </li>
         </ul>
       </div>
@@ -84,6 +84,11 @@ function Footer() {
           </li>
         </ul>
       </div>
+      <p style={{ color: "red", fontWeight: "bold", marginTop: "10px" }}>
+  This site is a portfolio/demo project. It is not affiliated with Netflix or any other service.
+</p>
+
+    
     </div>
   );
 }
